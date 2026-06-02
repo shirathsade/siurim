@@ -1,0 +1,390 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tqr\tx720\tqr\tx1440\tqr\tx2160\tqr\tx2880\tqr\tx3600\tqr\tx4320\tqr\tx5040\tqr\tx5760\tqr\tx6480\tqr\tx7200\tqr\tx7920\tqr\tx8640\pardirnatural\qr\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="he" dir="rtl">\
+<head>\
+<meta charset="UTF-8">\
+<meta name="viewport" content="width=device-width, initial-scale=1.0">\
+<title>\uc0\u1492 \u1495 \u1500 \u1508 \u1514  \u1505 \u1497 \u1493 \u1512 \u1497 \u1501 </title>\
+<style>\
+*\{box-sizing:border-box;margin:0;padding:0\}\
+body\{font-family:system-ui,Arial,sans-serif;background:#f5f5f0;color:#1a1a1a;min-height:100vh\}\
+.container\{max-width:680px;margin:0 auto;padding:16px\}\
+.view\{display:none\}.view.active\{display:block\}\
+input,select,textarea\{width:100%;padding:9px 12px;border:1px solid #ddd;border-radius:8px;background:#fff;color:#1a1a1a;font-size:14px;font-family:inherit\}\
+input:focus,textarea:focus\{outline:none;border-color:#1D9E75\}\
+textarea\{resize:vertical;min-height:72px\}\
+label\{font-size:13px;color:#666;display:block;margin-bottom:4px\}\
+.field\{margin-bottom:12px\}\
+.btn\{padding:9px 18px;border-radius:8px;border:1px solid #ddd;background:#fff;color:#1a1a1a;font-size:14px;cursor:pointer;font-family:inherit\}\
+.btn:hover\{background:#f5f5f0\}\
+.btn-primary\{background:#1D9E75;border-color:#0F6E56;color:#fff\}\
+.btn-primary:hover\{background:#0F6E56\}\
+.btn-danger\{border-color:#f7c1c1;color:#791f1f;background:#fff\}\
+.btn-approve\{border-color:#c0dd97;color:#27500a;background:#fff\}\
+.card\{background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:16px 20px;margin-bottom:12px\}\
+.g2\{display:grid;grid-template-columns:1fr 1fr;gap:12px\}\
+.g3\{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px\}\
+.badge\{display:inline-block;padding:2px 10px;border-radius:20px;font-size:12px\}\
+.b-p\{background:#faeeda;color:#633806\}\
+.b-a\{background:#eaf3de;color:#27500a\}\
+.b-d\{background:#fcebeb;color:#791f1f\}\
+.tabs\{display:flex;border-bottom:1px solid #e8e8e8;margin-bottom:20px\}\
+.tab\{padding:10px 20px;cursor:pointer;font-size:14px;color:#888;border-bottom:2px solid transparent;margin-bottom:-1px\}\
+.tab.active\{color:#1D9E75;border-bottom-color:#1D9E75;font-weight:500\}\
+.meta\{font-size:13px;color:#888\}\
+.nav\{display:flex;justify-content:space-between;align-items:center;padding:12px 0 18px\}\
+.nav-title\{font-size:20px;font-weight:500\}\
+.month-sep\{font-size:12px;font-weight:600;color:#888;padding:14px 0 6px;border-bottom:1px solid #eee;margin-bottom:10px\}\
+.tour-card\{background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:14px 18px;margin-bottom:10px\}\
+.spots-big\{font-size:24px;font-weight:600;color:#1D9E75\}\
+.sc\{display:flex;align-items:center;gap:6px\}\
+.sc button\{width:28px;height:28px;border-radius:6px;border:1px solid #ddd;background:#f5f5f0;cursor:pointer;font-size:16px;color:#1a1a1a\}\
+.empty\{color:#aaa;font-size:14px;text-align:center;padding:40px 0\}\
+table\{width:100%;border-collapse:collapse;font-size:13px\}\
+th\{text-align:right;padding:8px 10px;color:#888;font-weight:400;border-bottom:1px solid #eee;white-space:nowrap\}\
+td\{padding:8px 10px;border-bottom:1px solid #eee;vertical-align:top\}\
+.success-box\{background:#eaf3de;border:1px solid #c0dd97;border-radius:12px;padding:32px;text-align:center\}\
+.loading\{text-align:center;padding:24px;color:#888\}\
+@media(max-width:500px)\{.g2,.g3\{grid-template-columns:1fr\}.nav-title\{font-size:17px\}table\{font-size:12px\}\}\
+</style>\
+</head>\
+<body>\
+<div class="container">\
+\
+<div id="vp" class="view active">\
+  <div class="nav">\
+    <span class="nav-title">\uc0\u55356 \u57151  \u1492 \u1495 \u1500 \u1508 \u1514  \u1505 \u1497 \u1493 \u1512 \u1497 \u1501 </span>\
+    <button class="btn" onclick="go('vl')">\uc0\u1499 \u1504 \u1497 \u1505 \u1514  \u1502 \u1504 \u1492 \u1500 </button>\
+  </div>\
+  <div id="pub-list"><div class="loading">\uc0\u1496 \u1493 \u1506 \u1503  \u1505 \u1497 \u1493 \u1512 \u1497 \u1501 ...</div></div>\
+  <div id="reg-form" style="display:none">\
+    <div class="card">\
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">\
+        <span style="font-size:15px;font-weight:500">\uc0\u1492 \u1512 \u1513 \u1502 \u1492  \u1500 \u1505 \u1497 \u1493 \u1512 </span>\
+        <button class="btn" style="padding:3px 10px;font-size:13px" onclick="closeForm()">\uc0\u10005 </button>\
+      </div>\
+      <div id="reg-info" style="background:#f5f5f0;border-radius:8px;padding:10px 14px;margin-bottom:14px;font-size:14px"></div>\
+      <div class="g2">\
+        <div class="field"><label>\uc0\u1513 \u1501  \u1502 \u1500 \u1488  *</label><input id="fn" placeholder="\u1497 \u1513 \u1512 \u1488 \u1500  \u1497 \u1513 \u1512 \u1488 \u1500 \u1497 "></div>\
+        <div class="field"><label>\uc0\u1496 \u1500 \u1508 \u1493 \u1503  *</label><input id="fp" placeholder="050-0000000"></div>\
+      </div>\
+      <div class="field"><label>\uc0\u1488 \u1497 \u1502 \u1497 \u1497 \u1500  *</label><input id="fe" type="email" placeholder="mail@example.com"></div>\
+      <div class="field"><label>\uc0\u1513 \u1501  \u1492 \u1511 \u1493 \u1512 \u1505  \u1492 \u1502 \u1511 \u1493 \u1512 \u1497  \u1513 \u1500 \u1497  *</label><input id="fc" placeholder="\u1500 \u1497 \u1511 \u1493 \u1496  \u1489 \u1490 \u1500 \u1497 \u1500  \'97 \u1511 \u1489 \u1493 \u1510 \u1492  \u1489 \u1523 "></div>\
+      <div class="field"><label>\uc0\u1505 \u1497 \u1489 \u1514  \u1492 \u1492 \u1495 \u1500 \u1508 \u1492  *</label><input id="fr" placeholder="\u1500 \u1488  \u1497 \u1499 \u1493 \u1500 \u1514 \u1497  \u1500 \u1492 \u1490 \u1497 \u1506  \u1500 \u1505 \u1497 \u1493 \u1512 ..."></div>\
+      <div class="field"><label>\uc0\u1492 \u1506 \u1512 \u1493 \u1514 </label><textarea id="fo" placeholder="\u1499 \u1500  \u1502 \u1492  \u1513 \u1495 \u1513 \u1493 \u1489  \u1500 \u1497  \u1513 \u1514 \u1491 \u1506 ..."></textarea></div>\
+      <button class="btn btn-primary" id="submit-btn" onclick="submitReg()" style="width:100%">\uc0\u1513 \u1500 \u1497 \u1495 \u1514  \u1489 \u1511 \u1513 \u1492 </button>\
+    </div>\
+  </div>\
+  <div id="reg-ok" style="display:none">\
+    <div class="success-box">\
+      <div style="font-size:40px;margin-bottom:8px">\uc0\u10003 </div>\
+      <div style="font-size:16px;font-weight:500;color:#27500a;margin:8px 0 6px">\uc0\u1492 \u1489 \u1511 \u1513 \u1492  \u1504 \u1513 \u1500 \u1495 \u1492 !</div>\
+      <div style="font-size:14px;color:#3b6d11;margin-bottom:16px">\uc0\u1504 \u1495 \u1494 \u1493 \u1512  \u1488 \u1500 \u1497 \u1498  \u1506 \u1501  \u1488 \u1497 \u1513 \u1493 \u1512  \u1489 \u1492 \u1511 \u1491 \u1501 .</div>\
+      <button class="btn" onclick="backToList()">\uc0\u1495 \u1494 \u1512 \u1492  \u1500 \u1505 \u1497 \u1493 \u1512 \u1497 \u1501 </button>\
+    </div>\
+  </div>\
+</div>\
+\
+<div id="vl" class="view">\
+  <div class="nav">\
+    <span class="nav-title">\uc0\u1499 \u1504 \u1497 \u1505 \u1514  \u1502 \u1504 \u1492 \u1500 </span>\
+    <button class="btn" onclick="go('vp')">\uc0\u8592  \u1495 \u1494 \u1512 \u1492 </button>\
+  </div>\
+  <div class="card" style="max-width:340px;margin:0 auto">\
+    <div class="field"><label>\uc0\u1505 \u1497 \u1505 \u1502 \u1492 </label><input id="pw" type="password" placeholder="\u1492 \u1499 \u1504 \u1505  \u1505 \u1497 \u1505 \u1502 \u1492 " onkeydown="if(event.key==='Enter')login()"></div>\
+    <button class="btn btn-primary" onclick="login()" style="width:100%">\uc0\u1499 \u1504 \u1497 \u1505 \u1492 </button>\
+    <div id="pwerr" style="color:#a32d2d;font-size:13px;margin-top:8px;display:none">\uc0\u1505 \u1497 \u1505 \u1502 \u1492  \u1513 \u1490 \u1493 \u1497 \u1492 </div>\
+  </div>\
+</div>\
+\
+<div id="va" class="view">\
+  <div class="nav">\
+    <span class="nav-title">\uc0\u55356 \u57151  \u1504 \u1497 \u1492 \u1493 \u1500 </span>\
+    <button class="btn" onclick="go('vp')">\uc0\u1497 \u1510 \u1497 \u1488 \u1492 </button>\
+  </div>\
+  <div class="tabs">\
+    <div class="tab active" id="tab-r" onclick="aTab('r')">\uc0\u1489 \u1511 \u1513 \u1493 \u1514  \u1512 \u1497 \u1513 \u1493 \u1501 </div>\
+    <div class="tab" id="tab-t" onclick="aTab('t')">\uc0\u1505 \u1497 \u1493 \u1512 \u1497  \u1492 \u1495 \u1493 \u1491 \u1513 </div>\
+  </div>\
+  <div id="pan-r">\
+    <div id="regs-wrap"><div class="loading">\uc0\u1496 \u1493 \u1506 \u1503 ...</div></div>\
+  </div>\
+  <div id="pan-t" style="display:none">\
+    <div class="card">\
+      <div style="font-size:15px;font-weight:500;margin-bottom:14px">+ \uc0\u1492 \u1493 \u1505 \u1508 \u1514  \u1505 \u1497 \u1493 \u1512 </div>\
+      <div class="g2">\
+        <div class="field"><label>\uc0\u1513 \u1501  \u1492 \u1505 \u1497 \u1493 \u1512 </label><input id="tn" placeholder="\u1500 \u1497 \u1511 \u1493 \u1496  \u1489 \u1499 \u1512 \u1502 \u1500  \'97 \u1489 \u1497 \u1514  2"></div>\
+        <div class="field"><label>\uc0\u1511 \u1493 \u1512 \u1505 </label><input id="tc" placeholder="\u1500 \u1497 \u1511 \u1493 \u1496  \u1489 \u1499 \u1512 \u1502 \u1500 "></div>\
+      </div>\
+      <div class="g3">\
+        <div class="field"><label>\uc0\u1514 \u1488 \u1512 \u1497 \u1498 </label><input id="td" type="date"></div>\
+        <div class="field"><label>\uc0\u1513 \u1506 \u1492 </label><input id="tt" type="time"></div>\
+        <div class="field"><label>\uc0\u1502 \u1511 \u1493 \u1501  \u1502 \u1508 \u1490 \u1513 </label><input id="tl" placeholder="\u1495 \u1504 \u1497 \u1493 \u1503  \u1512 \u1502 \u1514  \u1492 \u1504 \u1491 \u1497 \u1489 "></div>\
+      </div>\
+      <div class="g2">\
+        <div class="field">\
+          <label>\uc0\u1502 \u1511 \u1493 \u1502 \u1493 \u1514  \u1508 \u1504 \u1493 \u1497 \u1497 \u1501 </label>\
+          <div class="sc" style="margin-top:6px">\
+            <button onclick="adj(-1)">\uc0\u8722 </button>\
+            <span id="sv" style="min-width:28px;text-align:center;font-weight:500">4</span>\
+            <button onclick="adj(1)">+</button>\
+          </div>\
+        </div>\
+        <div class="field"><label>\uc0\u1492 \u1506 \u1512 \u1492  (\u1488 \u1493 \u1508 \u1510 \u1497 \u1493 \u1504 \u1500 \u1497 )</label><input id="tnote" placeholder="\u1510 \u1497 \u1493 \u1491 , \u1500 \u1489 \u1493 \u1513 ..."></div>\
+      </div>\
+      <button class="btn btn-primary" onclick="addTour()" style="width:100%">\uc0\u1492 \u1493 \u1505 \u1508 \u1514  \u1505 \u1497 \u1493 \u1512 </button>\
+    </div>\
+    <div id="admin-tours-wrap"></div>\
+  </div>\
+</div>\
+\
+</div>\
+<script>\
+const ADMIN_PASSWORD = '1234';\
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzTW2bXiJgZDP3tpOsJnH-FkmN17GyDpHSHsbKS5jy5YbNXiNzI6fDwytSTrlofLXAUzA/exec';\
+\
+let sn = 4;\
+let selTour = null;\
+let TOURS = [];\
+let REGS = [];\
+\
+async function loadData() \{\
+  try \{\
+    const res = await fetch(APPS_SCRIPT_URL + '?action=getData');\
+    const data = await res.json();\
+    TOURS = data.tours || [];\
+    REGS = data.regs || [];\
+  \} catch(e) \{\
+    TOURS = [];\
+    REGS = [];\
+  \}\
+  renderPub();\
+\}\
+\
+function go(id) \{\
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));\
+  document.getElementById(id).classList.add('active');\
+  if (id === 'vp') \{ renderPub(); \}\
+  if (id === 'va') \{ loadData().then(() => \{ renderRegs(); renderAdminTours(); \}); \}\
+\}\
+\
+function fmt(d) \{\
+  if (!d) return '';\
+  const [y,m,dd] = d.split('-');\
+  return dd + '.' + m + '.' + y;\
+\}\
+\
+function monthHeb(d) \{\
+  if (!d) return '';\
+  const [y,m] = d.split('-');\
+  const n = ['\uc0\u1497 \u1504 \u1493 \u1488 \u1512 ','\u1508 \u1489 \u1512 \u1493 \u1488 \u1512 ','\u1502 \u1512 \u1509 ','\u1488 \u1508 \u1512 \u1497 \u1500 ','\u1502 \u1488 \u1497 ','\u1497 \u1493 \u1504 \u1497 ','\u1497 \u1493 \u1500 \u1497 ','\u1488 \u1493 \u1490 \u1493 \u1505 \u1496 ','\u1505 \u1508 \u1496 \u1502 \u1489 \u1512 ','\u1488 \u1493 \u1511 \u1496 \u1493 \u1489 \u1512 ','\u1504 \u1493 \u1489 \u1502 \u1489 \u1512 ','\u1491 \u1510 \u1502 \u1489 \u1512 '];\
+  return n[parseInt(m)-1] + ' ' + y;\
+\}\
+\
+function renderPub() \{\
+  const el = document.getElementById('pub-list');\
+  document.getElementById('reg-form').style.display = 'none';\
+  document.getElementById('reg-ok').style.display = 'none';\
+  const open = TOURS.filter(t => parseInt(t.spots) > 0);\
+  if (!open.length) \{ el.innerHTML = '<div class="empty">\uc0\u1488 \u1497 \u1503  \u1505 \u1497 \u1493 \u1512 \u1497 \u1501  \u1508 \u1514 \u1493 \u1495 \u1497 \u1501  \u1499 \u1512 \u1490 \u1506 </div>'; return; \}\
+  el.innerHTML = open.map(t => `\
+    <div class="tour-card">\
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">\
+        <div>\
+          <div style="font-size:15px;font-weight:500;margin-bottom:4px">$\{t.name\}</div>\
+          <div class="meta">$\{fmt(t.date)\} \'b7 $\{t.time\} \'b7 $\{t.loc\}</div>\
+          <div class="meta">$\{t.course\}</div>\
+          $\{t.note ? `<div class="meta" style="margin-top:3px;color:#633806">\uc0\u55357 \u56524  $\{t.note\}</div>` : ''\}\
+        </div>\
+        <div style="text-align:center;min-width:56px">\
+          <div class="spots-big">$\{t.spots\}</div>\
+          <div style="font-size:12px;color:#888">\uc0\u1502 \u1511 \u1493 \u1502 \u1493 \u1514 </div>\
+        </div>\
+      </div>\
+      <button class="btn btn-primary" onclick="openReg('$\{t.id\}')" style="width:100%;margin-top:12px">\uc0\u1489 \u1511 \u1513 \u1514  \u1492 \u1512 \u1513 \u1502 \u1492 </button>\
+    </div>`).join('');\
+\}\
+\
+function openReg(tid) \{\
+  selTour = TOURS.find(t => t.id === tid);\
+  if (!selTour) return;\
+  document.getElementById('reg-info').innerHTML = `<strong>$\{selTour.name\}</strong> \'b7 $\{fmt(selTour.date)\} $\{selTour.time\} \'b7 $\{selTour.loc\}`;\
+  ['fn','fp','fe','fc','fr','fo'].forEach(id => document.getElementById(id).value = '');\
+  document.getElementById('reg-form').style.display = 'block';\
+  document.getElementById('reg-ok').style.display = 'none';\
+  document.getElementById('pub-list').style.display = 'none';\
+\}\
+\
+function closeForm() \{\
+  document.getElementById('reg-form').style.display = 'none';\
+  document.getElementById('pub-list').style.display = 'block';\
+\}\
+\
+async function submitReg() \{\
+  const v = id => document.getElementById(id).value.trim();\
+  if (!v('fn')||!v('fp')||!v('fe')||!v('fc')||!v('fr')) \{ alert('\uc0\u1504 \u1488  \u1500 \u1502 \u1500 \u1488  \u1488 \u1514  \u1499 \u1500  \u1492 \u1513 \u1491 \u1493 \u1514  \u1492 \u1502 \u1505 \u1493 \u1502 \u1504 \u1497 \u1501  *'); return; \}\
+  const btn = document.getElementById('submit-btn');\
+  btn.textContent = '\uc0\u1513 \u1493 \u1500 \u1495 ...';\
+  btn.disabled = true;\
+  try \{\
+    await fetch(APPS_SCRIPT_URL, \{\
+      method: 'POST',\
+      body: JSON.stringify(\{\
+        action: 'addReg',\
+        tourId: selTour.id, tourName: selTour.name,\
+        tourDate: selTour.date, tourTime: selTour.time, tourLoc: selTour.loc,\
+        name: v('fn'), phone: v('fp'), email: v('fe'),\
+        course: v('fc'), reason: v('fr'), notes: v('fo')\
+      \})\
+    \});\
+  \} catch(e) \{\}\
+  document.getElementById('reg-form').style.display = 'none';\
+  document.getElementById('pub-list').style.display = 'block';\
+  document.getElementById('reg-ok').style.display = 'block';\
+  btn.textContent = '\uc0\u1513 \u1500 \u1497 \u1495 \u1514  \u1489 \u1511 \u1513 \u1492 ';\
+  btn.disabled = false;\
+\}\
+\
+function backToList() \{\
+  document.getElementById('reg-ok').style.display = 'none';\
+  loadData();\
+\}\
+\
+function login() \{\
+  if (document.getElementById('pw').value === ADMIN_PASSWORD) \{\
+    document.getElementById('pwerr').style.display = 'none';\
+    go('va');\
+  \} else \{\
+    document.getElementById('pwerr').style.display = 'block';\
+  \}\
+\}\
+\
+function aTab(t) \{\
+  ['r','t'].forEach(x => \{\
+    document.getElementById('tab-'+x).classList.toggle('active', x===t);\
+    document.getElementById('pan-'+x).style.display = x===t ? 'block' : 'none';\
+  \});\
+  if (t==='r') renderRegs();\
+  if (t==='t') renderAdminTours();\
+\}\
+\
+function badge(s) \{\
+  return s==='pending' ? '<span class="badge b-p">\uc0\u1502 \u1502 \u1514 \u1497 \u1503 </span>' :\
+         s==='approved' ? '<span class="badge b-a">\uc0\u1488 \u1493 \u1513 \u1512 </span>' :\
+         '<span class="badge b-d">\uc0\u1504 \u1491 \u1495 \u1492 </span>';\
+\}\
+\
+function tourName(id) \{ const t = TOURS.find(t=>t.id===id); return t ? t.name : '\'97'; \}\
+\
+function renderRegs() \{\
+  const el = document.getElementById('regs-wrap');\
+  if (!REGS.length) \{ el.innerHTML = '<div class="empty">\uc0\u1488 \u1497 \u1503  \u1489 \u1511 \u1513 \u1493 \u1514  \u1506 \u1491 \u1497 \u1497 \u1503 </div>'; return; \}\
+  el.innerHTML = `<div style="overflow-x:auto"><table>\
+    <thead><tr><th>\uc0\u1513 \u1501 </th><th>\u1496 \u1500 \u1508 \u1493 \u1503 </th><th>\u1505 \u1497 \u1493 \u1512 </th><th>\u1511 \u1493 \u1512 \u1505  \u1502 \u1511 \u1493 \u1512 \u1497 </th><th>\u1505 \u1497 \u1489 \u1492 </th><th>\u1505 \u1496 \u1496 \u1493 \u1505 </th><th>\u1508 \u1506 \u1493 \u1500 \u1492 </th></tr></thead>\
+    <tbody>$\{REGS.map(r=>`<tr>\
+      <td>$\{r.name\}</td>\
+      <td style="direction:ltr;text-align:right">$\{r.phone\}</td>\
+      <td>$\{tourName(r.tourId)\}</td>\
+      <td>$\{r.course\}</td>\
+      <td>$\{r.reason\}$\{r.notes?`<br><span style="color:#888;font-size:12px">$\{r.notes\}</span>`:''\}</td>\
+      <td>$\{badge(r.status)\}</td>\
+      <td>$\{r.status==='pending'?`\
+        <button class="btn btn-approve" style="padding:3px 10px;font-size:12px;display:block;margin-bottom:4px" onclick="setStatus('$\{r.id\}','approved','$\{r.email\}','$\{r.name\}','$\{r.tourId\}')">\uc0\u1488 \u1513 \u1512 </button>\
+        <button class="btn btn-danger" style="padding:3px 10px;font-size:12px;display:block" onclick="setStatus('$\{r.id\}','denied','$\{r.email\}','$\{r.name\}','$\{r.tourId\}')">\uc0\u1491 \u1495 \u1492 </button>`:'\'97'\}\
+      </td>\
+    </tr>`).join('')\}</tbody>\
+  </table></div>`;\
+\}\
+\
+async function setStatus(regId, status, email, name, tourId) \{\
+  const tour = TOURS.find(t => t.id === tourId);\
+  try \{\
+    await fetch(APPS_SCRIPT_URL, \{\
+      method: 'POST',\
+      body: JSON.stringify(\{ action: 'setStatus', regId, status, email, name,\
+        tourName: tour ? tour.name : '', tourDate: tour ? fmt(tour.date) : '',\
+        tourTime: tour ? tour.time : '', tourLoc: tour ? tour.loc : '' \})\
+    \});\
+  \} catch(e) \{\}\
+  await loadData();\
+  renderRegs();\
+\}\
+\
+function adj(d) \{ sn = Math.max(1, sn+d); document.getElementById('sv').textContent = sn; \}\
+\
+async function addTour() \{\
+  const v = id => document.getElementById(id).value.trim();\
+  const name=v('tn'), course=v('tc'), date=document.getElementById('td').value, time=v('tt'), loc=v('tl'), note=v('tnote');\
+  if (!name||!course||!date||!loc) \{ alert('\uc0\u1504 \u1488  \u1500 \u1502 \u1500 \u1488  \u1513 \u1501 , \u1511 \u1493 \u1512 \u1505 , \u1514 \u1488 \u1512 \u1497 \u1498  \u1493 \u1502 \u1511 \u1493 \u1501 '); return; \}\
+  try \{\
+    await fetch(APPS_SCRIPT_URL, \{\
+      method: 'POST',\
+      body: JSON.stringify(\{ action: 'addTour', name, course, date, time, loc, spots: sn, note \})\
+    \});\
+  \} catch(e) \{\}\
+  ['tn','tc','td','tt','tl','tnote'].forEach(id => document.getElementById(id).value = '');\
+  sn = 4; document.getElementById('sv').textContent = 4;\
+  await loadData();\
+  renderAdminTours();\
+\}\
+\
+async function delTour(id) \{\
+  if (!confirm('\uc0\u1500 \u1502 \u1495 \u1493 \u1511  \u1505 \u1497 \u1493 \u1512  \u1494 \u1492 ?')) return;\
+  try \{\
+    await fetch(APPS_SCRIPT_URL, \{ method: 'POST', body: JSON.stringify(\{ action: 'delTour', id \}) \});\
+  \} catch(e) \{\}\
+  await loadData();\
+  renderAdminTours();\
+\}\
+\
+async function chSpots(id, d) \{\
+  const t = TOURS.find(t=>t.id===id);\
+  if (!t) return;\
+  const newSpots = Math.max(0, parseInt(t.spots)+d);\
+  try \{\
+    await fetch(APPS_SCRIPT_URL, \{ method: 'POST', body: JSON.stringify(\{ action: 'updateSpots', id, spots: newSpots \}) \});\
+  \} catch(e) \{\}\
+  await loadData();\
+  renderAdminTours();\
+\}\
+\
+function renderAdminTours() \{\
+  const el = document.getElementById('admin-tours-wrap');\
+  if (!TOURS.length) \{ el.innerHTML = '<div class="empty">\uc0\u1506 \u1491 \u1497 \u1497 \u1503  \u1500 \u1488  \u1492 \u1493 \u1505 \u1508 \u1514  \u1505 \u1497 \u1493 \u1512 \u1497 \u1501 </div>'; return; \}\
+  const byMonth = \{\};\
+  TOURS.forEach(t => \{ const k = t.date ? t.date.slice(0,7) : '\uc0\u1500 \u1500 \u1488 '; (byMonth[k] = byMonth[k]||[]).push(t); \});\
+  el.innerHTML = Object.keys(byMonth).sort().map(m => `\
+    <div class="month-sep">$\{monthHeb(m+'-01')\}</div>\
+    $\{byMonth[m].map(t=>`\
+      <div class="tour-card">\
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px">\
+          <div style="flex:1;min-width:0">\
+            <div style="font-size:14px;font-weight:500;margin-bottom:3px">$\{t.name\}</div>\
+            <div class="meta">$\{t.course\}</div>\
+            <div class="meta">$\{fmt(t.date)\} \'b7 $\{t.time\} \'b7 $\{t.loc\}</div>\
+            $\{t.note?`<div class="meta" style="color:#633806;margin-top:2px">\uc0\u55357 \u56524  $\{t.note\}</div>`:''\}\
+          </div>\
+          <div style="display:flex;flex-direction:column;align-items:center;gap:8px;flex-shrink:0">\
+            <div class="sc">\
+              <button onclick="chSpots('$\{t.id\}',-1)">\uc0\u8722 </button>\
+              <span style="min-width:24px;text-align:center;font-weight:500">$\{t.spots\}</span>\
+              <button onclick="chSpots('$\{t.id\}',1)">+</button>\
+            </div>\
+            <div style="font-size:11px;color:#888">\uc0\u1502 \u1511 \u1493 \u1502 \u1493 \u1514 </div>\
+            <button class="btn btn-danger" style="padding:3px 10px;font-size:12px" onclick="delTour('$\{t.id\}')">\uc0\u55357 \u56785  \u1492 \u1505 \u1512 </button>\
+          </div>\
+        </div>\
+      </div>`).join('')\}\
+  `).join('');\
+\}\
+\
+loadData();\
+</script>\
+</body>\
+</html>}
